@@ -3,5 +3,9 @@ body             { background: #333; }
 #page-wrap:after { content: "Smartphone Layout"; }
 
 h2 span, section h3 { display: none; }
+/* se cambia el siquiente estilo
 body                { font-size: xx-large; }
 footer, input       { font-size: large; }
+
+por este */
+footer     { font-size: large; }

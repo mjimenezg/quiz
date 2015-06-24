@@ -2,6 +2,7 @@
 <% var i; for (i=0; i < quizes.length; i++) { %>
    <tr>
      <td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
+     <td><%= quizes[i].tema %></td>
      <td><a href="quizes/<%= quizes[i].id %>/edit"><button>editar</button></a></td>
      <td>
        <form method="post" action="quizes/<%= quizes[i].id %>?_method=delete">
@@ -15,7 +16,7 @@
 </table>
 
 <form method="GET" action="/quizes">
-  Busque preguntas con:<br>
+  <span>Filtro </span>
   <input type="text" name="search" placeholder="cadena a buscar" required/>
   <input type="submit" value="Enviar">
 </form><p>

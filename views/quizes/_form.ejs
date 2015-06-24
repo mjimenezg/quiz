@@ -2,5 +2,17 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/> <p>
 <label for="resp" class="rem">Respuesta:</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/> <p>
+
+<% var x = {otro: "", humanidades: "", ocio:"", ciencia:"",tecnologia: ""};
+    x[quiz.tema]="selected";
+%>
+
+Tema: <select name="quiz[tema]">
+  <option value="otro"               <%= x["otro"] %>>Otro</option>
+  <option value="humanidades" <%= x["humanidades"] %>>Humanidades</option>
+  <option value="ocio"               <%= x["ocio"] %>>Ocio</option>
+  <option value="ciencia"         <%= x["ciencia"] %>>Ciencia</option>
+  <option value="tecnologia"   <%= x["tecnologia"] %>>Tecnología</option>
+</select><br>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar">

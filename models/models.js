@@ -48,6 +48,7 @@ sequelize.sync().then(function() {
       Quiz.bulkCreate(
         [ {pregunta: 'Capital de Italia',   respuesta: 'Roma',   tema: 'humanidades'},
           {pregunta: 'Capital de Portugal', respuesta: 'Lisboa', tema: 'humanidades'},
+          {pregunta: 'El rey de la selva', respuesta: 'Zaragoza', tema: 'ciencia'},
           {pregunta: 'El pueblo mas grande de Soria', respuesta: 'Zaragoza', tema: 'humanidades'}
         ]
       ).then(function(){console.log('Base de datos inicializada')});

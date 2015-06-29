@@ -32,6 +32,24 @@ app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Ejercicio Mod9-P2P (autoloout)
+// MW para todas las transacciones
+app.use(function(req, res, next) {
+   var marcatiempo=(new Date()).getTime();
+   var continuar=true;
+   if(req.session.user && req.session.marcatiempo){
+      // El usuario ha iniciado session
+      if(marcatiempo - req.session.marcatiempo > 120000){
+         //Tiempo de inactividad superado (120000ms = 2min)
+         delete req.session.user;       //eliminamos el usuario
+         res.redirect('/login');
+         continuar=false;
+     }
+   }
+   req.session.marcatiempo=marcatiempo;         //Se actualiza el tiempo
+   if (continuar) next();                       //No continuar al siguiente MW en caso de desconexión
+});
+
 // Helpers dinamicos:
 app.use(function(req, res, next) {
 

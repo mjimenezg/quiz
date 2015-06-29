@@ -8,7 +8,8 @@ body                 { font: 16px Georgia, serif; }
 section > div        { padding: 20px; }
 header, nav, section { background: #eee; text-align: center;}
 footer               { background: #eee; text-align: center;}
-nav span             { margin: 0px 10px 0px 0px;}
-img                  { width: 90px; height: 90px;}
+nav span             { margin: 0px 10px 0px 0px; width: 100%; display: inline-block;}
+img                  { width: 90px; height: 90px; float: left; }
 
 #ErrorMsgs { color: #f61; font-size: small}
+.right 				 {float: right;}

@@ -2,14 +2,16 @@
 body                 { font: 16px Georgia, serif; }
 
 #page-wrap           { margin: 2% auto; color: white; }
-#page-wrap > .main   { border: 1px solid #999; padding: 1%;
-	                   margin-bottom: 1px; color: black;}
+#page-wrap > .main   { border: 1px solid #999; padding: 1%; margin-bottom: 1px; color: black;}
 
 section > div        { padding: 20px; }
-header, nav, section { background: #eee; text-align: center;}
-footer               { background: #eee; text-align: center;}
-nav span             { margin: 0px 10px 0px 0px; width: 100%; display: inline-block;}
-img                  { width: 90px; height: 90px; float: left; }
+header, nav, section { background: #eee; text-align: center; }
+footer               { background: #eee; text-align: center; }
+nav span             { margin: 0px 10px 0px 0px; width: 100%; }
 
-#ErrorMsgs { color: #f61; font-size: small}
-.right 				 {float: right;}
+.autor_img					 { width: 90px; height: 90px; float: none; }
+.right 							 { float: right;}
+
+#ErrorMsgs 					 { color: #f61; font-size: small; }
+#tabla-stats, #tabla-quizes { text-align: left; border: 1px solid black;
+	 														margin: auto; background: #ddd }
